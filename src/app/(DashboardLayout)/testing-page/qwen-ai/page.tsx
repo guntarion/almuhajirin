@@ -4,8 +4,8 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import CommonBreadcrumb from '@/app/components/CommonBreadcrumb';
-import CommonCardHeader from '@/app/components/CommonCardHeader';
+import CommonBreadcrumb from '@/app/components/shared/CommonBreadcrumb';
+import CommonCardHeader from '@/app/components/shared/CommonCardHeader';
 
 const QwenAiPage = () => {
   const [userInput, setUserInput] = useState('');

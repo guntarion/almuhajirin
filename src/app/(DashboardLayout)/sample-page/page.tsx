@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import CommonBreadcrumb from '@/app/components/CommonBreadcrumb';
-import CommonCardHeader from '@/app/components/CommonCardHeader';
+import CommonBreadcrumb from '@/app/components/shared/CommonBreadcrumb';
+import CommonCardHeader from '@/app/components/shared/CommonCardHeader';
 
 const SamplePage = () => {
   return (
@@ -14,9 +14,7 @@ const SamplePage = () => {
             <div className='rounded-lg bg-white dark:bg-gray-800 shadow-md'>
               <CommonCardHeader heading='Sample Page' subHeading={[{ text: 'This is a sample page with common components' }]} />
               <div className='p-6'>
-                <p className='text-gray-600 dark:text-gray-300'>
-                  This is a basic sample page that demonstrates the use of CommonBreadcrumb and CommonCardHeader components.
-                </p>
+                <p className='text-gray-600 dark:text-gray-300'>This is a basic sample page.</p>
               </div>
             </div>
           </div>

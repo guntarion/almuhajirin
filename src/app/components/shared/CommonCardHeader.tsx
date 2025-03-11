@@ -1,4 +1,4 @@
-// src/app/(DashboardLayout)/components/shared/CommonCardHeader.tsx
+// src/app/components/shared/CommonCardHeader.tsx
 // This component displays a card header with a main heading and optional subheadings
 
 interface SubHeading {

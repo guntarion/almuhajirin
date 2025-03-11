@@ -1,4 +1,4 @@
-// src/app/components/CommonBreadcrumb.tsx
+// src/app/components/shared/CommonBreadcrumb.tsx
 // This component displays a breadcrumb navigation with page title and parent link
 
 interface BreadcrumbProps {

@@ -2,8 +2,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import CommonBreadcrumb from '@/app/components/CommonBreadcrumb';
-import CommonCardHeader from '@/app/components/CommonCardHeader';
+import CommonBreadcrumb from '@/app/components/shared/CommonBreadcrumb';
+import CommonCardHeader from '@/app/components/shared/CommonCardHeader';
 import { useAuth } from '@/hooks/useAuth';
 import RoleGuard from '@/Components/auth/RoleGuard';
 import { Button, Label, Modal, Select, Spinner, Table } from 'flowbite-react';

@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-import CommonBreadcrumb from '@/app/components/CommonBreadcrumb';
+import CommonBreadcrumb from '@/app/components/shared/CommonBreadcrumb';
 import { useAuth } from '@/hooks/useAuth';
 
 /**
