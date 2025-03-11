@@ -1,0 +1,103 @@
+// src/app/(DashboardLayout)/kelola-inovasi/diseminasi/diseminasi.module.scss
+
+// Innovation card hover effect
+.innovation-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+// Readiness metrics chart container
+.metrics-chart {
+  height: 300px;
+  position: relative;
+
+  canvas {
+    max-width: 100%;
+  }
+}
+
+// Tab animation
+.tab-transition {
+  transition: all 0.3s ease;
+}
+
+// Badge styles for innovation categories
+.category-badge {
+  &.app {
+    background-color: #3b82f6;
+  }
+
+  &.process {
+    background-color: #10b981;
+  }
+
+  &.mechanical {
+    background-color: #f59e0b;
+  }
+
+  &.electrical {
+    background-color: #8b5cf6;
+  }
+}
+
+// Comment section styling
+.comment-thread {
+  .comment-reply {
+    margin-left: 2.5rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1rem;
+      height: 100%;
+      width: 2px;
+      background-color: #e5e7eb;
+    }
+  }
+}
+
+// Image gallery
+.gallery-thumbnail {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &.active,
+  &:hover {
+    opacity: 1;
+    border-color: #3b82f6;
+  }
+}
+
+// Interest form floating button
+.interest-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Dashboard card animation
+.dashboard-card {
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+  }
+}
+
+// For dark mode support
+@media (prefers-color-scheme: dark) {
+  .comment-thread .comment-reply::before {
+    background-color: #374151;
+  }
+}
