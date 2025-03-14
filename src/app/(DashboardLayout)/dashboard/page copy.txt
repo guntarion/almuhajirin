@@ -5,7 +5,7 @@ import React from 'react';
 
 import CommonBreadcrumb from '@/app/components/shared/CommonBreadcrumb';
 import { useAuth } from '@/hooks/useAuth';
-import DonasiDashboard from '@/app/components/dashboard-donasi/DonasiDashboard';
+import DonasiDashboard from '@/components/dashboard-donasi/DonasiDashboard';
 
 /**
  * Dashboard page for authenticated users
@@ -39,7 +39,48 @@ const Dashboard = () => {
               {/* Role-specific guidelines */}
               <div className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg'>
                 <h3 className='text-lg font-semibold mb-2'>Your Access Level</h3>
-                <DonasiDashboard></DonasiDashboard>
+                <p className='mb-2'>Based on your role, you have access to the following features:</p>
+                <ul className='list-disc list-inside space-y-1 text-gray-600 dark:text-gray-300'>
+                  {user?.role === 'admin' && (
+                    <>
+                      <li>Full platform administration</li>
+                      <li>User management</li>
+                      <li>All innovation management features</li>
+                    </>
+                  )}
+                  {user?.role === 'moderator' && (
+                    <>
+                      <li>Content moderation</li>
+                      <li>Innovation review</li>
+                      <li>User supervision</li>
+                    </>
+                  )}
+                  {user?.role === 'editor' && (
+                    <>
+                      <li>Content creation and editing</li>
+                      <li>Documentation management</li>
+                    </>
+                  )}
+                  {user?.role === 'member' && (
+                    <>
+                      <li>Idea submission</li>
+                      <li>Collaboration on projects</li>
+                      <li>Basic innovation tools</li>
+                    </>
+                  )}
+                  {user?.role === 'viewer' && (
+                    <>
+                      <li>View ideas and projects</li>
+                      <li>Read documentation</li>
+                    </>
+                  )}
+                  {(user?.role === 'guest' || !user?.role) && (
+                    <>
+                      <li>Limited platform access</li>
+                      <li>Public content viewing</li>
+                    </>
+                  )}
+                </ul>
               </div>
             </div>
           </div>
