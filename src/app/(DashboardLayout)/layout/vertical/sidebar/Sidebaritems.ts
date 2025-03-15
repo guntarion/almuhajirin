@@ -85,8 +85,8 @@ const SidebarContent: MenuItem[] = [
         children: [
           {
             id: uniqueId(),
-            name: 'Lookup',
-            url: '/ide-inovasi/lookup-idea',
+            name: 'Doa Generator',
+            url: '/doa-generator',
             isPro: false,
             roles: ['member', 'moderator', 'editor', 'admin'],
           },
